@@ -1,0 +1,29 @@
+
+alors si je dois donner toute les spécificités du jeu :
+le joueur est capable de se déplacer sur les plateformes (horizontalement) et d'aller de plateformes en plateforme (verticalement) en se téléportant. Il doit protéger une tour qui aura donc des points de vies qui sera solide donc non traversable par personne tout à gauche de l'écran. à droite de l'écran les spawner avec les monstres qui arrivent par vagues (15 par vague) et spawn chacun (des 15) aléatoirement sur une des 3 plateformes. si un monstres doit spawn sur la même plateforme que le prcédent au même moment ou presque alors crée un délai de 2 secondes. chaque ennemi a une vitesse aleatoire dans une plage de vitesse (pas trop élévé en général car chaque vague voit la vitesse de ses monstre augmenter. Il y aura 4 vagues. pour déclencher la vague suivante le joueur devra avoir vaincu tous les monstres de la vague . il y aura un délai de 6 seconde entre les 2 vague ainsi que le texte "Vague N" au milieu de l'écran avec N étant le numéro de la vague suivante.
+ici je teste que lorsque le joueur touche l'ennemi celui-ci disparait (considéré comme vaincu) dans le futur j'aimerai qu'à l'utilisation d'une touche pour attaquer avec son animation d'attaque(succession de sprites à intégrer) un objet soit créer devant le joueur (projectile) avec une certaine range pour infliger des dégâts aux ennemis (1 coup pour vague 1, 2 pour la 2 ainsi de suite jusqu'à la vague 4).
+lorsque les ennemis traversent le joueur il prends des dégâts (ses points de vies seront initialisés à 8)
+les conditions de victoires du joueur:
+vaincre tous les ennemis des 4 vagues et points de vie de la tour supérieur à 0 et points de vie du joueur supérieur à 0
+les conditions de défaites :
+points de vie du joueur égale ou inférieur à 0 ou points de vie de la tour égale ou inférieur à 0
+ChatGPT
+Merci pour ces détails ! Avec cette description complète, je comprends mieux l'objectif et les fonctionnalités du jeu. Pour résoudre les problèmes actuels et ajouter les fonctionnalités manquantes, voici les étapes que je propose :
+
+Assurer que les ennemis disparaissent correctement lorsqu'ils entrent en collision avec le joueur.
+Implémenter la gestion des vagues avec les conditions de déclenchement de la vague suivante après avoir vaincu tous les monstres de la vague actuelle et avec un délai de 6 secondes entre les vagues.
+Afficher le texte "Vague N" au milieu de l'écran pendant le délai entre les vagues, où N est le numéro de la vague suivante.
+Ajouter la gestion des points de vie du joueur et de la tour.
+Intégrer la capacité pour le joueur d'attaquer avec un projectile, infligeant des dégâts aux ennemis dans une certaine portée.
+Gérer les dégâts infligés au joueur lorsque les ennemis le traversent.
+Implémenter les conditions de victoire et de défaite du joueur.
+Avec ces étapes, nous devrions pouvoir compléter le jeu conformément à vos spécifications. Est-ce que cela vous convient ?
+
+maintenant faisons les fonctionnalités de la tour : 
+- elle doit être solide donc ni le joueur ni les ennemis pourront la traverser
+- elle a une barre de vie (on va mettre 40 pdv)
+- pour a barre de vie j'aimerais un système où la barre est verte et qu'en fonction des pdv perdues la zone verte deviens rouge
+pour être plus claire, une barre verte découpé en n fois le nb de pv et à chaque fois que la tour perds ce nombre de zones (pv) et deviens rouge, donc le principe même d'une barre de vie.
+-les ennemis lui infligent des dgts différents en fonction de la vague, la 1ère fera 1 dgt, la 2è fera 2 point de dgt et ainsi de suite
+
+les dgts mobs sur la tour
