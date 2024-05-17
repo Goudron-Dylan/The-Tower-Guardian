@@ -160,6 +160,7 @@ class Spawner:
         self.time_between_waves = 6000
         self.max_waves = 4
         self.wave_number = 0
+        self.color = BLUE
         self.current_enemy_type = "fire"  # Initialiser le type d'ennemi à "fire"
 
     def spawn_monster(self):
